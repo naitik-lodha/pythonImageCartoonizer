@@ -27,7 +27,7 @@ def process_file(file_path):
         image = ctk.CTkImage(Image.open(file_path), size=(300, 300))
         imageLabel.configure(image=image)
         cartoonizeButton.configure(state="normal")
-        progressBar.set(0)
+
 
         print("Done")
     else:
@@ -51,9 +51,6 @@ imageLabel.pack(pady=10)
 cartoonizeButton = ctk.CTkButton(root, text="Cartoonize Image", command=lambda: cartoonize(file_path), state="disabled")
 cartoonizeButton.pack(pady=5)
 
-progressBar=ctk.CTkProgressBar(root,width=300,mode="indeterminate")
-progressBar.set(0)
-progressBar.pack()
 
 
 root.mainloop()
